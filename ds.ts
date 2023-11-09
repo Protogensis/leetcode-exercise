@@ -1,4 +1,6 @@
-
+/**链表节点
+ * 
+ */
 export class ListNode {
   val: number
   next: ListNode | null
@@ -15,7 +17,7 @@ export class ListNode {
 export class LinkedList {
   private dummy: ListNode
   private last: ListNode
-  private size:number
+  private size: number
   constructor() {
     this.dummy = new ListNode()
     this.last = this.dummy
@@ -29,11 +31,11 @@ export class LinkedList {
     this.size++
   }
 
-  getSize(){
+  getSize() {
     return this.size
   }
 
-  pushArray(arr:number[]){
+  pushArray(arr: number[]) {
     for (const iterator of arr) {
       this.push(iterator)
     }
@@ -43,20 +45,47 @@ export class LinkedList {
     return this.dummy.next
   }
 
-  
+
 
   toString() {
     let re = ''
     let cur = this.dummy.next
     while (cur != null) {
-      if(cur.next === null){
+      if (cur.next === null) {
         re += cur.val
         break
       }
-      re += cur.val+' -> '
+      re += cur.val + ' -> '
       cur = cur.next
     }
 
     return re
+  }
+}
+
+/**
+ * 栈
+ */
+export class Stack {
+  private arr: number[]
+  constructor() {
+    this.arr = new Array()
+  }
+
+  push(val: number) {
+    this.arr.push(val)
+  }
+
+  pop() {
+
+    return this.arr.pop()
+  }
+  
+  isEmpty() {
+    return this.size() === 0
+  }
+
+  size(){
+    return this.arr.length
   }
 }

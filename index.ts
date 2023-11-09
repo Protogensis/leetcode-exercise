@@ -1,22 +1,10 @@
-import { ListNode ,LinkedList} from './ds'
+import { LinkedList } from "./ds"
+import { getDecimalValue } from "./leetcode-exercise"
 
 let list = new LinkedList()
-let arr = [1,0,1]
+let arr = [0,1,0,1,0,0,1]
 list.pushArray(arr)
 
 
 console.log(list.toString())
-console.log(list.getSize())
-
-/**
- * 1290.二进制链表转整数
- */
-function getDecimalValue(head: ListNode | null): number {
-    
-
-    return 0
-    function add(){
-
-    }
-    
-};
+console.log(getDecimalValue(list.getHead()))

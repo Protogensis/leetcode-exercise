@@ -29,6 +29,7 @@
     "singleQuote": true,
     "printWidth": 115,
     "proseWrap": "always",
+    "useTabs": false,
     "semi": false,
     "trailingComma": "none"
   }
