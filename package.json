@@ -24,5 +24,12 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "prettier":{
+    "singleQuote": true, 
+        "printWidth": 115,
+        "proseWrap": "always",
+        "semi": false, 
+        "trailingComma": "none"
+  }
 }
