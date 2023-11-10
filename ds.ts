@@ -97,16 +97,16 @@ export class Stack {
 /**
  * 队列
  */
-export class Queue{
-    private arr:number[]
+export class Queue<T>{
+    private arr:T[]
     constructor(){
-        this.arr = new Array<number>()
+        this.arr = new Array<T>()
     }
-    push(val: number) {
+    push(val: T) {
         this.arr.push(val)
     }
 
-    pushArray(arr: number[]) {
+    pushArray(arr: T[]) {
         for (const iterator of arr) {
             this.push(iterator)
         }

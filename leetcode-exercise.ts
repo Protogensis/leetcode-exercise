@@ -1,4 +1,4 @@
-import { ListNode, TreeNode, Stack } from './ds'
+import { ListNode, TreeNode, Stack, Queue } from './ds'
 
 /**
  * 102.二叉树的层序遍历
@@ -7,7 +7,33 @@ import { ListNode, TreeNode, Stack } from './ds'
  * @todo
  */
 export function levelOrder(root: TreeNode | null): number[][] {
-    return new Array()
+    let res: number[][] = new Array()
+    if (root == null)
+        return new Array()
+    let queue = new Queue<TreeNode>()
+    queue.push(root)
+    while (!queue.isEmpty()) {
+
+        let size = queue.size()
+        let arr = new Array<number>()
+        for (let i = 0; i < size; i++) {
+            let node = queue.shift()
+            if (node !== undefined) {
+                arr.push(node.val)
+            }
+            if (node?.left != null) {
+                queue.push(node.left)
+            }
+            if (node?.right != null) {
+                queue.push(node.right)
+            }
+        }
+        res.push(arr)
+
+    }
+
+
+    return res
 };
 
 /**
@@ -15,6 +41,7 @@ export function levelOrder(root: TreeNode | null): number[][] {
  * @todo
  */
 function sortedArrayToBST(nums: number[]): TreeNode | null {
+
     return null
 };
 
@@ -34,18 +61,18 @@ function isBalanced(root: TreeNode | null): boolean {
 export function binaryTreePaths(root: TreeNode | null): string[] {
     let ret = new Array<string>()
     let path = ''
-    traverse(root,path)
-    function traverse(node: TreeNode|null,path:string) {
-        if(node === null){
+    traverse(root, path)
+    function traverse(node: TreeNode | null, path: string) {
+        if (node === null) {
             return
         }
-        if(node.left === null && node.right === null){
-            ret.push(path+node.val)
+        if (node.left === null && node.right === null) {
+            ret.push(path + node.val)
             return
         }
-        
-        traverse(node.left,path+node.val+'->')
-        traverse(node.right,path+node.val+'->')
+
+        traverse(node.left, path + node.val + '->')
+        traverse(node.right, path + node.val + '->')
     }
 
     return ret
