@@ -164,6 +164,12 @@ export class BinaryTree {
         }
     }
 
+    insertArray(arr:number[]){
+        for (const iterator of arr) {
+            this.insert(iterator)
+        }
+    }
+
     //遍历
     inorder():Array<number>{
 
@@ -177,6 +183,11 @@ export class BinaryTree {
         inorder(node.right)
       }
       return re
+    }
+
+    toString(){
+        let arr = this.inorder()
+        return arr
     }
     
 }
