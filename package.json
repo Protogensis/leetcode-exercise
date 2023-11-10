@@ -26,6 +26,7 @@
   "license": "ISC",
   "description": "",
   "prettier": {
+    "tabWidth": 4,
     "singleQuote": true,
     "printWidth": 115,
     "proseWrap": "always",
