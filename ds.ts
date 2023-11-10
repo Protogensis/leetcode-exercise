@@ -75,6 +75,12 @@ export class Stack {
         this.arr.push(val)
     }
 
+    pushArray(arr: number[]) {
+        for (const iterator of arr) {
+            this.push(iterator)
+        }
+    }
+
     pop() {
         return this.arr.pop()
     }
@@ -92,7 +98,7 @@ export class Stack {
  * 队列
  */
 export class Queue{
-    arr:number[]
+    private arr:number[]
     constructor(){
         this.arr = new Array<number>()
     }
@@ -100,6 +106,11 @@ export class Queue{
         this.arr.push(val)
     }
 
+    pushArray(arr: number[]) {
+        for (const iterator of arr) {
+            this.push(iterator)
+        }
+    }
 
 
     shift(){
