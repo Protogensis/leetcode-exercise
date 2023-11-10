@@ -92,7 +92,27 @@ export class Stack {
  * 队列
  */
 export class Queue{
-    
+    arr:number[]
+    constructor(){
+        this.arr = new Array<number>()
+    }
+    push(val: number) {
+        this.arr.push(val)
+    }
+
+
+
+    shift(){
+        return this.arr.shift()
+    }
+
+    isEmpty() {
+        return this.size() === 0
+    }
+
+    size() {
+        return this.arr.length
+    }
 }
 
 export class TreeNode {
