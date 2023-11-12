@@ -34,8 +34,7 @@ Aside {
 }
 
 RouterView{
-  widows: 300px;
-  height: 600px;
+  flex-grow: 1;
   background-color: aqua;
 }
 </style>

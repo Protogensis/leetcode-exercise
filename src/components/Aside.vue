@@ -4,7 +4,7 @@
     <aside>
         <h1>数据结构</h1>
         <RouterLink :to="{path:'/'}">Home</RouterLink>
-        
+        <RouterLink :to="{path:'/stack'}">栈</RouterLink>
     </aside>
 </template>
 
