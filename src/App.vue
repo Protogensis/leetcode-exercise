@@ -8,8 +8,10 @@ list.push(1)
 </script>
 
 <template>
-  <Aside></Aside>
-  <RouterView></RouterView>
+  <div id="container">
+    <Aside></Aside>
+    <RouterView></RouterView>
+  </div>
 </template>
 
 <style>
@@ -19,15 +21,21 @@ list.push(1)
   box-sizing: border-box;
 }
 
-body{
+#container {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
 
-Aside{
+Aside {
   width: 300px;
   height: 100vh;
+}
+
+RouterView{
+  widows: 300px;
+  height: 600px;
+  background-color: aqua;
 }
 </style>
