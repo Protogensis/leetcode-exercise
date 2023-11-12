@@ -98,8 +98,8 @@ export class Stack {
  * 队列
  */
 export class Queue<T>{
-    private arr:T[]
-    constructor(){
+    private arr: T[]
+    constructor() {
         this.arr = new Array<T>()
     }
     push(val: T) {
@@ -113,7 +113,7 @@ export class Queue<T>{
     }
 
 
-    shift(){
+    shift() {
         return this.arr.shift()
     }
 
@@ -126,6 +126,9 @@ export class Queue<T>{
     }
 }
 
+/**
+ * 二叉树节点
+ */
 export class TreeNode {
     val: number
     left: TreeNode | null
@@ -138,11 +141,29 @@ export class TreeNode {
 }
 
 /**
+ * 平衡二叉树节点
+ */
+export class AVLNode {
+    depth: number
+    val: number
+    parent: TreeNode | null
+    left: TreeNode | null
+    right: TreeNode | null
+    constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+        this.depth = 0
+        this.parent = null
+        this.val = val === undefined ? 0 : val
+        this.left = left === undefined ? null : left
+        this.right = right === undefined ? null : right
+    }
+}
+
+/**
  * 二叉搜索树
  */
 export class BinaryTree {
     root: TreeNode | null = null
-    constructor() {}
+    constructor() { }
 
     //插入
     insert(val: number) {
@@ -164,30 +185,37 @@ export class BinaryTree {
         }
     }
 
-    insertArray(arr:number[]){
+    insertArray(arr: number[]) {
         for (const iterator of arr) {
             this.insert(iterator)
         }
     }
 
     //遍历
-    inorder():Array<number>{
+    inorder(): Array<number> {
 
-      let re = new Array<number>()
-      inorder(this.root)
-      function inorder(node:TreeNode|null){
-        if(node == null)
-          return
-        inorder(node.left)
-        re.push(node.val)
-        inorder(node.right)
-      }
-      return re
+        let re = new Array<number>()
+        inorder(this.root)
+        function inorder(node: TreeNode | null) {
+            if (node == null)
+                return
+            inorder(node.left)
+            re.push(node.val)
+            inorder(node.right)
+        }
+        return re
     }
 
-    toString(){
+    toString() {
         let arr = this.inorder()
         return arr
     }
-    
+
 }
+
+
+
+/**
+ * 平衡二叉树
+ */
+
