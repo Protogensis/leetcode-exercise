@@ -97,23 +97,16 @@ export class Stack {
 /**
  * 队列
  */
-<<<<<<< HEAD:package/ds.ts
 export class Queue<T>{
     private arr: T[]
     constructor() {
         this.arr = new Array<T>()
-=======
-export class Queue{
-    private arr:number[]
-    constructor(){
-        this.arr = new Array<number>()
->>>>>>> parent of 4d04b7a (commit):ds.ts
     }
-    push(val: number) {
+    push(val:T) {
         this.arr.push(val)
     }
 
-    pushArray(arr: number[]) {
+    pushArray(arr: T[]) {
         for (const iterator of arr) {
             this.push(iterator)
         }
