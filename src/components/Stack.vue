@@ -8,6 +8,7 @@ stack.pushArray([1, 2, 3])
 const arr = stack.toArray()
 
 const text = ref('0')
+const s = ref(arr)
 
 
 
@@ -16,7 +17,7 @@ const text = ref('0')
 <template>
     <main>
         <div class="stackc">
-            <div class="item">1</div>
+            <div class="item">{{ s }}</div>
             <div class="item">2</div>
         </div>
 
