@@ -92,6 +92,10 @@ export class Stack {
     size() {
         return this.arr.length
     }
+
+    toArray(){
+        return this.arr
+    }
 }
 
 /**
