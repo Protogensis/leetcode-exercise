@@ -1,7 +1,6 @@
 <template>
     <main>
-        <h1>Stack</h1>
-
+        <h1>Home</h1>
     </main>
 </template>
 
@@ -14,7 +13,3 @@ main {
     align-items: center;
 }
 </style>
-
-<script setup lang="ts">
-
-</script>
