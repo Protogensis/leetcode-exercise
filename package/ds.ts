@@ -140,23 +140,7 @@ export class TreeNode {
     }
 }
 
-/**
- * 平衡二叉树节点
- */
-export class AVLNode {
-    depth: number
-    val: number
-    parent: TreeNode | null
-    left: TreeNode | null
-    right: TreeNode | null
-    constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
-        this.depth = 0
-        this.parent = null
-        this.val = val === undefined ? 0 : val
-        this.left = left === undefined ? null : left
-        this.right = right === undefined ? null : right
-    }
-}
+
 
 /**
  * 二叉搜索树
@@ -191,7 +175,10 @@ export class BinaryTree {
         }
     }
 
-    //遍历
+    /**
+     * 中序遍历
+     * @returns 
+     */
     inorder(): Array<number> {
 
         let re = new Array<number>()
@@ -206,6 +193,10 @@ export class BinaryTree {
         return re
     }
 
+    /**
+     * 
+     * @returns 中序遍历后的数组
+     */
     toString() {
         let arr = this.inorder()
         return arr
@@ -214,8 +205,30 @@ export class BinaryTree {
 }
 
 
+/**
+ * 平衡二叉树节点
+ */
+export class AVLNode {
+    depth: number
+    val: number
+    parent: TreeNode | null
+    left: TreeNode | null
+    right: TreeNode | null
+    constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+        this.depth = 0
+        this.parent = null
+        this.val = val === undefined ? 0 : val
+        this.left = left === undefined ? null : left
+        this.right = right === undefined ? null : right
+    }
+}
+
 
 /**
  * 平衡二叉树
  */
+
+export class AVL{
+    
+}
 

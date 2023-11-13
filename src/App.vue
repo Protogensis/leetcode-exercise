@@ -6,7 +6,7 @@ import Aside from "./components/Aside.vue";
 <template>
   <div class="common-layout">
     <el-container>
-      <el-aside width="300px">
+      <el-aside width="200px">
         <Aside></Aside>
       </el-aside>
       <RouterView></RouterView>
@@ -21,6 +21,8 @@ import Aside from "./components/Aside.vue";
   padding: 0;
   box-sizing: border-box;
 }
+
+
 
 
 RouterView {

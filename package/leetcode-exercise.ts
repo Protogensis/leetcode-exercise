@@ -1,51 +1,87 @@
-import { ListNode, TreeNode, Stack } from './ds'
+import { ListNode, TreeNode, Stack } from './ds.ts'
+
+/**
+ * 96.不同的二叉搜索树
+ * @param n
+ * @todo
+ */
+export function numTrees(n: number): number {
+    return n
+}
+
+/**
+ * 100.相同的树
+ * 
+ */
+export function isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {
+    
+
+
+    let flag = inorder(p, q)
+    function inorder(nodep: TreeNode | null, nodeq: TreeNode | null): boolean {
+        if (!nodep && !nodeq) return true
+        if (!nodep || !nodeq) return false
+        if (nodep.val !== nodeq.val) {
+            return false
+        }
+        return inorder(nodep.left, nodeq.left) && inorder(nodep.right, nodeq.right)
+    }
+
+    return flag
+}
 
 /**
  * 102.二叉树的层序遍历
- * @param root 
- * @returns 
+ * @param root
+ * @returns
  * @todo
  */
 export function levelOrder(root: TreeNode | null): number[][] {
-    return new Array()
-};
+    let r = root
+    r = new TreeNode(3)
+    return new Array(r.val)
+}
 
 /**
  * 108.将有序数组转换为二叉搜索树
  * @todo
  */
 function sortedArrayToBST(nums: number[]): TreeNode | null {
+    let a = nums
+    a = new Array()
     return null
-};
+}
 
 /**
  * 110.平衡二叉树
  * @todo
  */
 function isBalanced(root: TreeNode | null): boolean {
+    let a = root
+    console.log(a)
     return false
-};
+}
 
 /**
- * 
+ *
  * 257.二叉树的所有路径
- * 
+ *
  */
 export function binaryTreePaths(root: TreeNode | null): string[] {
     let ret = new Array<string>()
     let path = ''
-    traverse(root,path)
-    function traverse(node: TreeNode|null,path:string) {
-        if(node === null){
+    traverse(root, path)
+    function traverse(node: TreeNode | null, path: string) {
+        if (node === null) {
             return
         }
-        if(node.left === null && node.right === null){
-            ret.push(path+node.val)
+        if (node.left === null && node.right === null) {
+            ret.push(path + node.val)
             return
         }
-        
-        traverse(node.left,path+node.val+'->')
-        traverse(node.right,path+node.val+'->')
+
+        traverse(node.left, path + node.val + '->')
+        traverse(node.right, path + node.val + '->')
     }
 
     return ret

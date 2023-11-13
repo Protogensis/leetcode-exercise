@@ -12,7 +12,6 @@
 
 <style scoped>
 aside{
-    width: 300px;
     height: 100vh;
     background-color: rgb(211, 211, 211);
     display: flex;

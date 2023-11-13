@@ -1,37 +1,6 @@
 
 <script lang="ts">
-export default {
-    mounted() {
-        let {canvas,ctx} = this.initCancas()
-        window.addEventListener('resize',function(){
-            canvas.width = canvas.offsetWidth
-            canvas.height = canvas.offsetHeight
-            ctx.fillStyle = "green";
-            ctx.fillRect(10, 10, 100, 100);
-        })
-        
 
-    },
-    methods: {
-        initCancas() {
-            let canvas = document.getElementById('canvas') as HTMLCanvasElement;
-            if (!canvas)
-                throw new Error()
-            console.log(canvas)
-            const ctx = canvas.getContext('2d')
-            if (!ctx)
-                throw new Error()
-            
-            canvas.width = canvas.offsetWidth
-            canvas.height = canvas.offsetHeight
-            console.log(ctx)
-            ctx.fillStyle = "green";
-            ctx.fillRect(10, 10, 100, 100);
-            return {canvas,ctx}
-
-        }
-    }
-}
 
 
 
@@ -39,21 +8,40 @@ export default {
 
 <template>
     <main>
-        <canvas id="canvas"></canvas>
+        <div class="stackc">
+            <div class="item">1</div>
+            <div class="item">2</div>
+        </div>
     </main>
 </template>
 
 <style scoped>
-main {
+main{
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-canvas {
-    width: 100%;
-    height: 100%;
+.stackc{
+    width: 100px;
+    height: 300px;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.item{
+    width: 96px;
+    height: 30px;
+    margin-top: 10px;
+    background-color: orange;
+    text-align: center;
+    
 }
 </style>
