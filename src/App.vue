@@ -31,4 +31,3 @@ RouterView{
   background-color: aqua;
 }
 </style>
-../package/ds

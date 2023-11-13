@@ -8,7 +8,7 @@
   },
   "name": "leetcode-exercise",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "index.html",
   "dependencies": {
     "@vitejs/plugin-vue": "^4.4.1",
     "acorn": "^8.11.2",
@@ -30,6 +30,7 @@
   },
   "author": "",
   "license": "ISC",
+  "type": "module",
   "description": "",
   "prettier": {
     "tabWidth": 4,

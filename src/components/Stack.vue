@@ -1,6 +1,15 @@
+
+<script setup lang="ts">
+import {Stack} from '../../package/ds'
+let stack = new Stack()
+stack.push(1)
+console.log(stack)
+
+</script>
+
 <template>
     <main>
-        <h1>Stack</h1>
+        <canvas></canvas>
 
     </main>
 </template>
@@ -14,7 +23,3 @@ main {
     align-items: center;
 }
 </style>
-
-<script setup lang="ts">
-
-</script>
