@@ -4,9 +4,14 @@ import Aside from "./components/Aside.vue";
 </script>
 
 <template>
-  <div id="container">
-    <Aside></Aside>
-    <RouterView></RouterView>
+  <div class="common-layout">
+    <el-container>
+      <el-aside width="300px">
+        <Aside></Aside>
+      </el-aside>
+      <RouterView></RouterView>
+      
+    </el-container>
   </div>
 </template>
 
@@ -17,16 +22,10 @@ import Aside from "./components/Aside.vue";
   box-sizing: border-box;
 }
 
-#container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 
-
-
-
-RouterView{
+RouterView {
+  width: 100%;
+  height: 100%;
   flex-grow: 1;
   background-color: aqua;
 }

@@ -1,4 +1,7 @@
 import { createApp } from 'vue'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+
 import App from './App.vue'
 import * as Router from 'vue-router'
 import Home from './components/Home.vue'
@@ -14,4 +17,7 @@ const router = Router.createRouter({
     routes // `routes: routes` 的缩写
 })
 
-createApp(App).use(router).mount('#app')
+const app = createApp(App)
+app.use(ElementPlus)
+app.use(router)
+app.mount('#app')
