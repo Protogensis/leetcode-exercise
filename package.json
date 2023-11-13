@@ -2,13 +2,13 @@
   "devDependencies": {
     "@types/node": "^20.9.0",
     "ts-node": "^10.9.1",
-    "ts-node-dev": "^2.0.0",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2"
   },
   "name": "leetcode-exercise",
   "version": "1.0.0",
   "main": "index.html",
+  "type": "module",
   "dependencies": {
     "@vitejs/plugin-vue": "^4.4.1",
     "acorn": "^8.11.2",
@@ -30,7 +30,6 @@
   },
   "author": "",
   "license": "ISC",
-  "type": "module",
   "description": "",
   "prettier": {
     "tabWidth": 4,
