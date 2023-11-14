@@ -1,15 +1,9 @@
 
 import { BinaryTree } from "./ds.ts"
 import * as leetcode from './leetcode-exercise.ts'
-let p = new BinaryTree()
-const arrp = []
-p.insertArray(arrp)
 
-let q = new BinaryTree()
-const arrq = []
-q.insertArray(arrq)
+const arr = [-10,-3,0,9,10]
+const re = leetcode.sortedArrayToBST(arr)
 
-const f = leetcode.isSameTree(p.root,q.root)
-console.log(f)
-
+console.log(re)
 

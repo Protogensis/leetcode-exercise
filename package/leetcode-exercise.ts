@@ -1,4 +1,4 @@
-import { ListNode, TreeNode, Stack } from './ds.ts'
+import { ListNode, TreeNode, Stack, Queue, BinaryTree } from './ds.ts'
 
 /**
  * 96.不同的二叉搜索树
@@ -46,10 +46,24 @@ export function levelOrder(root: TreeNode | null): number[][] {
  * 108.将有序数组转换为二叉搜索树
  * @todo
  */
-function sortedArrayToBST(nums: number[]): TreeNode | null {
-    let a = nums
-    a = new Array()
-    return null
+export function sortedArrayToBST(nums: number[]): TreeNode | null {
+    let rootnum = nums[nums.length/2]
+    let set = new Set<number>()
+    set.add(rootnum)
+    nums.forEach((e)=>{
+        set.add(e)
+    })
+    let queue = new Queue<number>()
+    set.forEach((e)=>{
+        queue.push(e)
+    })
+    let tree = new BinaryTree()
+    while(!queue.isEmpty()){
+        tree.insert(queue.shift())
+    }
+
+
+    return tree.root
 }
 
 /**

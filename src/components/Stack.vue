@@ -1,15 +1,16 @@
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref,onMounted } from 'vue'
 import { Stack } from '../../package/ds';
 const stack = new Stack()
 stack.pushArray([1, 2, 3])
 
-const arr = stack.toArray()
 
 const text = ref('0')
-const s = ref(arr)
-
+onMounted(()=>{
+    const s = document.querySelector('.stackc')
+    console.log(s)
+})
 
 
 </script>
@@ -17,15 +18,15 @@ const s = ref(arr)
 <template>
     <main>
         <div class="stackc">
-            <div class="item">{{ s }}</div>
             <div class="item">2</div>
+            <div class="item">1</div>
         </div>
 
-        <form>
+        <form action="" onsubmit="return func()">
             <div class="item" style="width: 100px;">{{ text }}</div>
             <input v-model="text" type="number" id="content">
-            <button id="push">PUSH</button>
-            <button id="pop">POP</button>
+            <input type="submit" value="push" >
+            <input type="submit" value="pop" >
         </form>
     </main>
 </template>
