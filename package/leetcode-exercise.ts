@@ -59,7 +59,10 @@ export function sortedArrayToBST(nums: number[]): TreeNode | null {
     })
     let tree = new BinaryTree()
     while(!queue.isEmpty()){
-        tree.insert(queue.shift())
+        const number = queue.shift()
+        if(number){
+            tree.insert(number)
+        }
     }
 
 
