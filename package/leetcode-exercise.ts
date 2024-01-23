@@ -14,9 +14,6 @@ export function numTrees(n: number): number {
  * 
  */
 export function isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {
-    
-
-
     let flag = inorder(p, q)
     function inorder(nodep: TreeNode | null, nodeq: TreeNode | null): boolean {
         if (!nodep && !nodeq) return true
